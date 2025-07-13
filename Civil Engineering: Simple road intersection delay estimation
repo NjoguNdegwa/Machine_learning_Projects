@@ -1,0 +1,11 @@
+#Civil Engineering: Simple road intersection delay estimation
+# civil_engineering/road_intersection_analysis.py
+
+def calculate_delay(vehicle_count, green_time, cycle_time):
+    """Estimate average delay at intersection using Webster's formula."""
+    d = (vehicle_count * (cycle_time - green_time)**2) / (2 * cycle_time * (1 - (green_time / cycle_time)))
+    return d
+
+if __name__ == "__main__":
+    delay = calculate_delay(vehicle_count=200, green_time=30, cycle_time=90)
+    print(f"Estimated average delay: {delay:.2f} seconds")
