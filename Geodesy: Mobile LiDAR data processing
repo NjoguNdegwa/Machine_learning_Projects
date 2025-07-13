@@ -1,0 +1,13 @@
+# geodesy/mobile_lidar_processing.py
+
+import numpy as np
+
+def filter_lidar_points(points, z_threshold=1.5):
+    """Filter LiDAR points above a certain height threshold."""
+    filtered = [pt for pt in points if pt[2] > z_threshold]
+    return np.array(filtered)
+
+if __name__ == "__main__":
+    sample_points = np.array([[1,2,0.5], [2,3,2.0], [3,4,1.7]])
+    filtered_points = filter_lidar_points(sample_points)
+    print("Filtered LiDAR points:", filtered_points)
