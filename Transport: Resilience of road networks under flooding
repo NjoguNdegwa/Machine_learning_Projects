@@ -1,0 +1,13 @@
+# transport/transport_network_resilience.py
+
+def assess_resilience(road_sections, flood_impact):
+    """Calculate % of road sections operational after flood impact."""
+    operational = [rs for rs in road_sections if rs not in flood_impact]
+    resilience_score = len(operational) / len(road_sections) * 100
+    return resilience_score
+
+if __name__ == "__main__":
+    roads = ['A', 'B', 'C', 'D', 'E']
+    floods = ['B', 'D']
+    score = assess_resilience(roads, floods)
+    print(f"Resilience Score: {score:.2f}%")
