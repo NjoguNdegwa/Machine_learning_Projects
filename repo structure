@@ -1,0 +1,27 @@
+civil-geodesy-transport-projects/
+│
+├── README.md
+├── requirements.txt
+│
+├── geodesy/
+│    ├── mobile_lidar_processing.py
+│    ├── spatial_analysis.py
+│    ├── datasets/
+│
+├── transport/
+│    ├── transport_network_resilience.py
+│    ├── climate_risk_analysis.py
+│    ├── datasets/
+│
+├── civil_engineering/
+│    ├── road_intersection_analysis.py
+│    ├── structural_simulation.py
+│    ├── datasets/
+│
+├── notebooks/
+│    ├── geodesy_exploration.ipynb
+│    ├── transport_analysis.ipynb
+│    ├── civil_engineering_models.ipynb
+│
+└── reports/
+     └── thesis_summary.pdf
